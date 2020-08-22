@@ -13,11 +13,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     $name = 'Thalal Atha Nabil';
+//     $aliasname = 'Ryzntx';
 
+//     return view('about', ['name' => $name, 'aliasname' => $aliasname]);
+// });
+
+// Route::get('/contacts', function () {
+//     $ig = 'https://www.instagram.com/thanbl';
+//     $fb = 'https://www.instagram.com/thanbl';
+//     $git = 'https://www.instagram.com/thanbl';
+
+//     return view('contacts', ['ig' => $ig, 'fb' => $fb, 'git' => $git]);
+// });
+
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+
+Route::get('/pelajar', 'PelajarController@index');
+
+
+
+// Route::get('/students', 'StudentsController@index');
+// Route::get('/students/create', 'StudentsController@create');
+// Route::get('/students/{student}', 'StudentsController@show');
+// Route::post('/students', 'StudentsController@store');
+// Route::delete('/students/{student}', 'StudentsController@destroy');
+// Route::get('/students/{student}/edit', 'StudentsController@edit');
+// Route::patch('/students/{student}', 'StudentsController@update');
+
+Route::resource('students', 'StudentsController');
