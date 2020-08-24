@@ -17,12 +17,12 @@
             @endif
 
             <ul class="list-group">
-            @foreach($student as $students)
-                <li class="list-group-item d-flex justify-content-between align-items-center">
+                @foreach($student as $students)
+                <li class="list-group-item d-flex justify-content-between align-items-center bg-secondary text-white">
                     {{ $students->nama}}
                     <a href="/students/{{ $students->id }}" class="badge badge-info">detail</a>
                 </li>
-            @endforeach
+                @endforeach
             </ul>
         </div>
     </div>

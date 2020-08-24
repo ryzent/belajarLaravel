@@ -16,8 +16,8 @@ class PelajarController extends Controller
     public function index()
     {
         // $users = DB::table('siswa')->get();
-        $users = Student::all();
-        return view('pelajar.index', ['pelajar' => $users]);
+        $pelajar = Student::all();
+        return view('pelajar.index', compact('pelajar'));
     }
 
     /**
@@ -81,8 +81,9 @@ class PelajarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Student $id)
     {
-        //
+        Student::destroy($id->id);
+        return redirect('/pelajar')->with('status', 'Data Siswa berhasil dihapuskan!');
     }
 }

@@ -36,6 +36,7 @@ Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 
 Route::get('/pelajar', 'PelajarController@index');
+Route::delete('/pelajar/{students}', 'PelajarController@destroy');
 
 
 

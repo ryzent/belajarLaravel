@@ -26,12 +26,12 @@
                     @enderror
                 </div>
                 <div class="form-group col-8">
-                    <label for="jurusan">jurusan Siswa</label>
+                    <label for="jurusan">Jurusan Siswa</label>
                     <input type="text" class="form-control" id="jurusan" value="{{ old('jurusan') }}"
                         placeholder="Masukan jurusan" name="jurusan">
                 </div>
                 <div class="form-group col-8">
-                    <label for="email">email Siswa</label>
+                    <label for="email">Email Siswa</label>
                     <input type="text" class="form-control" id="email" value="{{ old('email') }}"
                         placeholder="Masukan email siswa" name="email">
                 </div>

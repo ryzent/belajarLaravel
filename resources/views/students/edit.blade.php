@@ -27,14 +27,14 @@
                     @enderror
                 </div>
                 <div class="form-group col-8">
-                    <label for="jurusan">jurusan Siswa</label>
+                    <label for="jurusan">Jurusan Siswa</label>
                     <input type="text" class="form-control" id="jurusan" value="{{ $student->jurusan }}"
                         placeholder="Masukan jurusan" name="jurusan">
                 </div>
                 <div class="form-group col-8">
-                    <label for="email">email Siswa</label>
+                    <label for="email">Email Siswa</label>
                     <input type="text" class="form-control" id="email" value="{{ $student->email }}"
-                        placeholder="Masukan email siswa" name="email">
+                        placeholder="Masukan Email siswa" name="email">
                 </div>
                 <button type="submit" class="btn btn-primary">Ubah Data!</button>
             </form>
